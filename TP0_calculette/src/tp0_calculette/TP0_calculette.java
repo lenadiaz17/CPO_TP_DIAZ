@@ -23,13 +23,19 @@ public class TP0_calculette {
         System.out.println("3) multiply");
         System.out.println("4) divide");
         System.out.println("5) modulo");
+        
+        
+        
 
-        System.out.print("Choisi un nombre entre 1 et 5 : ");
+        System.out.print("Choisi un nombre entre 1 et 5");
         int operateur = sc.nextInt();
 
         System.out.print("Entrer le premier nombre : ");
         int operande1 = sc.nextInt();
 
+        
+        
+        
         System.out.print("Entrer le second nombre : ");
         int operande2 = sc.nextInt();
 
@@ -53,4 +59,3 @@ public class TP0_calculette {
         }
     }
 }
-
