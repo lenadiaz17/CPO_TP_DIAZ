@@ -33,7 +33,7 @@ public class TP2_relation_1_DIAZ {
         
         System.out.println("la premiere voiture de Bob est " + bob.liste_voitures[0]);
         
-        bob.liste_voitures
+        //bob.liste_voitures
     
     }
 }

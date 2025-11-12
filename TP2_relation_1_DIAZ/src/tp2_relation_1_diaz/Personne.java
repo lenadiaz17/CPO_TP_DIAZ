@@ -36,15 +36,15 @@ return chaine;
     public boolean ajouter_voiture(Voiture voiture_a_ajouter) {
         if (voiture_a_ajouter.proprietaire != null){
             System.out.println("Erreur : voiture volée");
-            return false
+            return false;
         }
         if (nbVoitures >= 3) {
             System.out.println("Erreur : " + prenom + " possede deja 3 voitures");
-            return false
+            return false;
         }
-        lise_voitures[nbVoitures]= voiture_a_ajouter;
+        liste_voitures[nbVoitures]= voiture_a_ajouter;
         nbVoitures++;
         voiture_a_ajouter.proprietaire = this;
-        return true 
+        return true; 
     }
 }
