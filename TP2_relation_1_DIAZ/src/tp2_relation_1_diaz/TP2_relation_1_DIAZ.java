@@ -31,8 +31,23 @@ public class TP2_relation_1_DIAZ {
         
         uneClio.proprietaire = bob; 
         
-        System.out.println("la premiere voiture de Bob est " + bob.liste_voitures[0]);
+        bob.ajouter_voiture(uneClio);
+        bob.ajouter_voiture(uneAutreClio);
+
+        reno.ajouter_voiture(une2008);
+        reno.ajouter_voiture(uneMicra);
         
+        System.out.println("\nVoitures de Bob :");
+        for (int i = 0; i < bob.nbVoitures; i++) {
+            System.out.println(bob.liste_voitures[i]);
+        
+        }
+        System.out.println("\nVoitures de Reno :");
+        for (int i = 0; i < reno.nbVoitures; i++) {
+            System.out.println(reno.liste_voitures[i]);
+        }
+        
+       
         //bob.liste_voitures
     
     }
