@@ -4,6 +4,9 @@
  */
 package tp3_heroic_fantasy_diaz;
 
+import Personnages.Personnage;
+import Personnages.Magicien;
+import Personnages.Guerrier;
 import Armes.baton;
 import Armes.Epée;
 
@@ -18,11 +21,27 @@ public class TP3_Heroic_Fantasy_DIAZ {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Epée excalibur = new Epée("Excalibur", 7,5);
-        Epée durandal = new Epée("Durandal", 4,7);
-        
-        baton Chêne = new baton("Chêne", 4,5);
-        baton charme = new baton("Charme", 5,6);
+        Epée excalibur = new Epée("Excalibur", 7, 5);
+        Epée durandal = new Epée("Durandal", 4, 7);
+
+        baton Chêne = new baton("Chêne", 4, 5);
+        baton charme = new baton("Charme", 5, 6);
+
+        Magicien m1 = new Magicien("Gandalf", 65, true);
+        Magicien m2 = new Magicien("Garcimore", 44, false);
+
+        Guerrier g1 = new Guerrier("Conan", 78, false);
+        Guerrier g2 = new Guerrier("Lannister", 45, true);
+
+        ArrayList<Personnage> personnages = new ArrayList<>();
+        personnages.add(m1);
+        personnages.add(m2);
+        personnages.add(g1);
+        personnages.add(g2);
+
+        System.out.println("Liste des personnages");
+        for (int i = 0; i < personnages.size(); i = i + 1) {
+        }
+
     }
-    
 }
