@@ -13,7 +13,15 @@ public class baton extends Arme {
 
     public baton(String nom, int niveauAttaque, int age) {
         super(nom, niveauAttaque);
-        if (age > 100) age = 100;
+        if (age < 0){
+            age=0;
+           
+        } else if (age>100){
+            age = 100
+        } else {
+            age = age
+        }
+        this.age=age;
     }
 
     public int getAge() {

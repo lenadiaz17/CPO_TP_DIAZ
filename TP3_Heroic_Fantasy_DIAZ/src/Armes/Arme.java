@@ -14,6 +14,13 @@ public class Arme {
     
     public Arme(String nom, int niveauAttaque){
         this.nom = nom;
+        if (niveauAttaque < 0) {
+            niveauAttaque = 0;
+        } else if (niveauAttaque > 100){
+            niveauAttaque = 100;
+        } else {
+            niveauAttaque = niveauAttaque;
+        }
         this.niveauAttaque = niveauAttaque;
     }
     public String getNom(){

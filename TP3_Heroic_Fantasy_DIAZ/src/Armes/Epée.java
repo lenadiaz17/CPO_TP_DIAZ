@@ -13,7 +13,15 @@ public class Epée extends Arme {
 
     public Epée(String nom, int niveauAttaque, int finesse) {
         super(nom, niveauAttaque);
-        if (finesse > 100) finesse=100;
+        if (finesse < 0){
+            finesse =0;
+        
+        } else if (finesse > 100){
+            finesse =100;
+        } else {
+            finesse = finesse;
+        }
+        this.finesse=finesse;
     }
 
     public int getFinesse() {
@@ -22,7 +30,7 @@ public class Epée extends Arme {
 
     @Override
     public String toString() {
-        return super.toString() + " | Finesse : " + finesse;
+        return super.toString() + " Epée finesse : " + finesse;
     }
 }
 
