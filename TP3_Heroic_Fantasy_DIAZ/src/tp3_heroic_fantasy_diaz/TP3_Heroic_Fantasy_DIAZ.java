@@ -24,7 +24,7 @@ public class TP3_Heroic_Fantasy_DIAZ {
         Epée excalibur = new Epée("Excalibur", 7, 5);
         Epée durandal = new Epée("Durandal", 4, 7);
 
-        baton Chêne = new baton("Chêne", 4, 5);
+        baton chene = new baton("Chêne", 4, 5);
         baton charme = new baton("Charme", 5, 6);
 
         Magicien m1 = new Magicien("Gandalf", 65, true);
@@ -33,15 +33,68 @@ public class TP3_Heroic_Fantasy_DIAZ {
         Guerrier g1 = new Guerrier("Conan", 78, false);
         Guerrier g2 = new Guerrier("Lannister", 45, true);
 
-        ArrayList<Personnage> personnages = new ArrayList<>();
-        personnages.add(m1);
-        personnages.add(m2);
-        personnages.add(g1);
-        personnages.add(g2);
+        System.out.println(excalibur);
+        System.out.println(durandal);
+        System.out.println(chene);
+        System.out.println(charme);
+        
+        System.out.println(m1);
+        System.out.println(m2);
+        System.out.println(g1);
+        System.out.println(g2);
 
-        System.out.println("Liste des personnages");
-        for (int i = 0; i < personnages.size(); i = i + 1) {
-        }
+        Magicien gandalf2 = new Magicien("Gandalf", 65, true);
+        Guerrier conan2 = new Guerrier("Conan", 78, false);
 
-    }
-}d
+
+        Epée excalibur2 = new Epée("Excalibur", 7, 5);
+        Epée durandal2 = new Epée("Durandal", 4, 7);
+        baton chene2 = new baton("Chêne", 4, 5);
+
+       
+
+        m1.ajouterArme(chene);
+        m1.ajouterArme(excalibur);
+        g1.ajouterArme(durandal);
+
+
+        m1.equiperParNom("Chêne");
+        g1.equiperParNom("Durandal");
+
+
+        System.out.println(m1);
+        System.out.println(g1);
+       
+       
+        g1.seFatiguer();
+        System.out.println("Conan vivant ? " + g1.estVivant());
+
+        g1.attaquer(m1);
+        System.out.println(m1);
+        
+        System.out.println("\n=== MORRRRTAL COMBAT ===");
+
+        Magicien novice = new Magicien("Novice",50,false);
+        Guerrier chevalier = new Guerrier("Chevalier",80,true);
+
+        novice.ajouterArme(chene);
+        novice.ajouterArme(durandal);
+        novice.equiperParNom("Chêne");
+
+        chevalier.ajouterArme(charme);
+        chevalier.ajouterArme(excalibur);
+        chevalier.equiperParNom("Excalibur");
+
+        novice.attaquer(chevalier);
+        System.out.println(chevalier);
+
+        chevalier.attaquer(novice);
+        System.out.println(novice);
+
+        System.out.println("\nNovice vivant ? " + novice.estVivant());
+        System.out.println("Chevalier vivant ? " + chevalier.estVivant());
+
+        System.out.println("\n=== FIN TP3 ===");
+    }  
+}
+

@@ -17,9 +17,9 @@ public class baton extends Arme {
             age=0;
            
         } else if (age>100){
-            age = 100
+            age = 100;
         } else {
-            age = age
+            age = age;
         }
         this.age=age;
     }

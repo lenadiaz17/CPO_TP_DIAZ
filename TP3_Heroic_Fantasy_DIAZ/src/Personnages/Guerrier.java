@@ -11,28 +11,36 @@ import tp3_heroic_fantasy_diaz.Personnage;
  * @author user
  */
 public class Guerrier extends Personnage {
-    
-    boolean cheval;
-    
-    public static int nbGuerriers=0;
-    
-    public Guerrier(String nom, int vie, boolean cheval){
-        super(nom, vie);
-        this.cheval = cheval;
+    public static int nbGuerriers = 0;
+ 
+    private boolean aCheval;
+ 
+    public Guerrier(String nom, int niveauVie, boolean aCheval) {
+        super(nom, niveauVie);
+        this.aCheval = aCheval;
+ 
         nbGuerriers++;
+        nbPersonnages++;
     }
-    
-    public void setCheval(boolean c){
-        cheval = c;
+ 
+    public boolean isACheval() {
+        return aCheval;
     }
-    
-    @Override
-    public void attaquer (Personnage p){
-        int degats=30;
-        if (armeEnMain != null){
-            String typeArme
-        }
+ 
+    public void setACheval(boolean aCheval) {
+        this.aCheval = aCheval;
     }
+ 
+public void detruire() {
+    nbGuerriers--;     // décrémente le compteur spécifique
+    nbPersonnages--;   // décrémente le compteur général
+    System.out.println(nom + " le guerrier a été détruit. NbGuerriers = " + nbGuerriers);
+}
+ 
+public void attaquer(Personnage cible) {
+    System.out.println(nom + " attaque " + cible.nom + " !");
+    cible.estAttaque(30); // ou 20 selon la classe
+}
     
     
     

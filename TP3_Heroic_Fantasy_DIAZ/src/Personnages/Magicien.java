@@ -11,19 +11,23 @@ import tp3_heroic_fantasy_diaz.Personnage;
  * @author user
  */
 public class Magicien extends Personnage{
-    
-    boolean confirme;
+    private boolean confirme;
+    public static int nbMag = 0;
 
-    public static int nbMagiciens = 0;
-
-    public Magicien(String nom, int vie, boolean confirme) {
-        super(nom, vie);
+    public Magicien(String nom, int niveauVie, boolean confirme) {
+        super(nom, niveauVie);
         this.confirme = confirme;
-        nbMagiciens++;
+        nbMag++;
     }
 
-    public void setConfirme(boolean c) {
-        confirme = c;
+    public int nbArmesPredilection() {
+        int c = 0;
+        for (Arme a : inventaire) if (a instanceof Baton) c++;
+        return c;
+    }
+
+    public void setConfirme(boolean confirme) {
+        this.confirme = confirme;
     }
 
     public boolean isConfirme() {
@@ -31,43 +35,29 @@ public class Magicien extends Personnage{
     }
 
     @Override
+    public String toString() {
+        return super.toString() + " | Magicien (confirmé=" + confirme + ")";
+    }
+   
+    @Override
     public void attaquer(Personnage p) {
-        int degats = 20;
+        int degats;
 
-        if (armeEnMain != null){
-            Stirng typeArme = armeEnMain.getClass().getSimpleName();
-            if (typeArme.equals("baton")){
+        if (armeEnMain == null) {
+            degats = 20;
+        } else {
+            degats = armeEnMain.getNiveauAttaque();
+
+            if (armeEnMain instanceof baton) {
                 baton b = (baton) armeEnMain;
-                degats = degats*b.getAge();
+                degats *= b.getAge();
+                seFatiguer();
             }
         }
 
-        if (confirme) {
-            degats /= 2;
-        }
+        if (confirme) degats /= 2;
 
         p.estAttaque(degats);
-        this.seFatiguer();
     }
-    @Override
-    String toString(){
-        String etat; 
-        if (confirme) {
-            etat = "Confirmé";
-        } else {
-            etat = "Débutant";
-        }
-        String arme; 
-        if (armeEnMain != null){
-            arme = armeEnMain.toString();
-        } else {
-            arme = "Aucune arme";
-        }
-        return nom + " (Vie : " + vie + ", État : " + etat + ", Arme : " + arme + ")";
-    }
-    
-    
 }
-
-    
 
