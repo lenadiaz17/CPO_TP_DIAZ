@@ -4,8 +4,8 @@
  */
 package Personnages;
 
-import tp3_heroic_fantasy_diaz.Personnage;
-
+import Personnages.*;
+import Armes.*;
 /**
  *
  * @author user
@@ -22,7 +22,7 @@ public class Magicien extends Personnage{
 
     public int nbArmesPredilection() {
         int c = 0;
-        for (Arme a : inventaire) if (a instanceof Baton) c++;
+        for (Arme a : inventaire) if (a instanceof baton) c++;
         return c;
     }
 

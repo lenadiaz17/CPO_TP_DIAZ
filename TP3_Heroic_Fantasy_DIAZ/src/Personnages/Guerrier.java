@@ -4,8 +4,6 @@
  */
 package Personnages;
 
-import tp3_heroic_fantasy_diaz.Personnage;
-
 /**
  *
  * @author user

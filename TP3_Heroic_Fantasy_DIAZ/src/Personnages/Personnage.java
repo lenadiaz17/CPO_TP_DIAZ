@@ -7,20 +7,17 @@ package Personnages;
 import Personnages.Magicien;
 import Personnages.Guerrier;
 import java.util.ArrayList;
+    import Armes.Arme ;
+    import Armes.baton ;
+    import Armes.Epée ;
+    import java.util.ArrayList ;
+   // import TP3_Heroic_Fantasy_DIAZ.etreVivant ; // import interface correctement
 
 /**
  *
  * @author user
  */
-public class Personnage {
-
-    import Armes.Arme ;
-    import Armes.baton ;
-    import Armes.Epée ;
-    import java.util.ArrayList ;
-    import TP3_Heroic_Fantasy_DIAZ.etreVivant ; // import interface correctement
-
-    public abstract class Personnage implements etreVivant {
+  public abstract class Personnage  {
 
         public String nom;
         protected int niveauVie;
@@ -75,18 +72,18 @@ public class Personnage {
             System.out.println(nom + " ne possède pas d’arme appelée " + nomArme);
         }
 
-        @Override
+     //   @Override
         public void seFatiguer() {
             this.niveauVie -= 10;
             System.out.println(nom + " se fatigue (-10 vie). Vie restante = " + niveauVie);
         }
 
-        @Override
+   //     @Override
         public boolean estVivant() {
             return this.niveauVie > 0;
         }
 
-        @Override
+     //   @Override
         public void estAttaque(int points) {
             this.niveauVie -= points;
             System.out.println(nom + " est attaqué : -" + points + " vie. Vie restante = " + niveauVie);
@@ -101,4 +98,3 @@ public class Personnage {
                     + " | Inventaire : " + inventaire.size() + " arme(s)";
         }
     }
-}
