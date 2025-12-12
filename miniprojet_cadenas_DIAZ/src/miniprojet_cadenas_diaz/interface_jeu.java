@@ -125,10 +125,11 @@ public class interface_jeu extends javax.swing.JFrame {
         texte_nb_chiffres_bas.setText("0");
         getContentPane().add(texte_nb_chiffres_bas, new org.netbeans.lib.awtextra.AbsoluteConstraints(273, 389, -1, -1));
 
-        texte_score.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        texte_score.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         texte_score.setForeground(new java.awt.Color(255, 102, 204));
         texte_score.setText("score");
-        getContentPane().add(texte_score, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 354, -1, -1));
+        texte_score.setBorder(new javax.swing.border.MatteBorder(null));
+        getContentPane().add(texte_score, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 350, -1, -1));
 
         texte_tentatives.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         texte_tentatives.setText("Tentatives");
@@ -266,6 +267,10 @@ public class interface_jeu extends javax.swing.JFrame {
                 message = "PERDU !! Le code secret était : " + jeu.getCodeSecretString();
             }
             JOptionPane.showMessageDialog(this, message, "Fin de partie", JOptionPane.INFORMATION_MESSAGE);
+            
+            fin a = new fin();
+            a.setVisible(true);
+            this.dispose();  
         }
     }//GEN-LAST:event_bouton_testerActionPerformed
 
