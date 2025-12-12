@@ -20,14 +20,18 @@ public class métier {
     private int[] codeSecret;
     private int tentativesRestantes;
     private boolean estGagne;
+    private int tentativesMax;
    
-    public métier() {
+    public métier(int tentativesMax) {
+        this.tentativesMax = tentativesMax;
         démarrerJeu();
     }
-   
+    public métier(){
+        this(5);
+    }
     public final void démarrerJeu() {
         codeSecret = générerCodeSecret();
-        tentativesRestantes = MAX_TENTATIVES;
+        tentativesRestantes = tentativesMax;
         estGagne = false;
     }
    
@@ -76,11 +80,11 @@ public class métier {
     }
    
     public int getTentativesEffectuees() {
-        return MAX_TENTATIVES - tentativesRestantes;
+        return tentativesMax - tentativesRestantes;
     }
    
     public int getMaxTentatives() {
-        return MAX_TENTATIVES;
+        return tentativesMax;
     }
 
     public boolean estGagne() {
