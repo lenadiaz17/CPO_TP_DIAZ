@@ -9,17 +9,17 @@ package chevauchee_fantastique_diaz;
  * @author user
  */
 public class cavalier {
-    int x;
-    int y;
+    int ligne;
+    int colonne;
 
-    public cavalier(int x, int y) {
-        this.x = x;
-        this.y = y;
+    public cavalier(int l, int c) {
+        ligne=l;
+        colonne=c;
     }
 
-    public void deplacer(int newX, int newY) {
-        x = newX;
-        y = newY;
+    public void deplacer(int l, int c) {
+        ligne=l;
+        colonne=c;
     }
     
 }

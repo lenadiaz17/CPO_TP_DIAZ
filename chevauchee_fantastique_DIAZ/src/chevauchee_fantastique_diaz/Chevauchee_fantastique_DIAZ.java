@@ -14,7 +14,8 @@ public class Chevauchee_fantastique_DIAZ {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        new Fenetre_jeu();
+        new Fenetre_jeu().setVisible(true);
+
     }
-    
+
 }
