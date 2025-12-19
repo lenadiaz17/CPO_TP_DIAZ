@@ -17,5 +17,4 @@ public class Chevauchee_fantastique_DIAZ {
         new Fenetre_jeu().setVisible(true);
 
     }
-
 }
