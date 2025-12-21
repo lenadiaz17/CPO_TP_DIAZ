@@ -63,7 +63,7 @@ public class Fenetre_jeu extends JFrame {
         boutons[5][4] = jButton35;
         boutons[5][5] = jButton36;
 
-   
+       
     
     }
     
