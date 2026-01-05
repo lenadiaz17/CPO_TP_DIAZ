@@ -14,7 +14,7 @@ public class Chevauchee_fantastique_DIAZ {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -22,13 +22,9 @@ public class Chevauchee_fantastique_DIAZ {
                     break;
                 }
             }
-        } 
-        
-        catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        
-        java.awt.EventQueue.invokeLater(() -> new Fenetre_jeu().setVisible(true));
+        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
 
+        }
+        java.awt.EventQueue.invokeLater(() -> new Fenetre_jeu().setVisible(true));
     }
 }
